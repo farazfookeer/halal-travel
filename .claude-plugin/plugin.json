@@ -1,0 +1,10 @@
+{
+  "name": "halal-travel",
+  "version": "0.1.0",
+  "description": "Plan, book and build itineraries for halal holidays: halal food, alcohol-free stays, prayer times, Jummah, modesty-friendly facilities, Ramadan and Eid.",
+  "author": {
+    "name": "Faraz Fookeer"
+  },
+  "license": "MIT",
+  "keywords": ["halal", "travel", "muslim-friendly", "itinerary", "prayer-times", "ramadan"]
+}
