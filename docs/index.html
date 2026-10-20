@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Halal Travel Planner: a Claude skill for halal holidays | Silsila Labs</title>
+<meta name="description" content="Open-source Claude skill for planning halal holidays: halal food and alcohol-free stays, prayer times, qibla, Jummah, women-only and private pools, Ramadan and Eid, with day-by-day itineraries and maps.">
+<meta name="keywords" content="halal travel, halal holiday, Muslim-friendly travel, halal hotels, prayer times, qibla, Jummah, Ramadan travel, Eid, itinerary planner, Claude skill, AI travel agent">
+<meta name="author" content="Faraz Fookeer">
+<link rel="canonical" href="https://farazfookeer.github.io/halal-travel/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Halal Travel Planner: a Claude skill for halal holidays">
+<meta property="og:description" content="Plan, book and build itineraries for halal holidays, checked against your own standards for food, prayer, modesty, Ramadan and Eid.">
+<meta property="og:url" content="https://farazfookeer.github.io/halal-travel/">
+<meta property="og:image" content="https://raw.githubusercontent.com/farazfookeer/halal-travel/main/docs/screenshots/itinerary-map.png">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareSourceCode",
+  "name": "halal-travel",
+  "description": "Claude skill for planning halal holidays: halal food, alcohol-free stays, prayer times, qibla, Jummah, modesty-friendly facilities, Ramadan and Eid.",
+  "codeRepository": "https://github.com/farazfookeer/halal-travel",
+  "programmingLanguage": "Python",
+  "license": "https://opensource.org/licenses/MIT",
+  "author": {"@type": "Person", "name": "Faraz Fookeer"},
+  "keywords": "halal travel, Muslim-friendly travel, prayer times, qibla, Ramadan, itinerary, Claude skill"
+}
+</script>
+<style>
+:root{--bg:#F7F5F0;--card:#fff;--ink:#1d1d1f;--muted:#5d5d63;--accent:#2E7D6B;--line:#E6E1D8}
+@media (prefers-color-scheme:dark){:root{--bg:#141517;--card:#1E2024;--ink:#EDEDED;--muted:#A5A7AD;--accent:#6CC3AC;--line:#2C2F34}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:960px;margin:0 auto;padding:40px 16px 64px}
+header h1{font-size:clamp(28px,5vw,40px);line-height:1.15;margin:0 0 12px}
+header p{color:var(--muted);font-size:18px;margin:0 0 20px;max-width:680px}
+.btns a{display:inline-block;margin:0 10px 10px 0;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.primary{background:var(--accent);color:#fff}.secondary{border:1px solid var(--line);color:var(--ink)}
+h2{font-size:22px;margin:44px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px}
+.card h3{margin:0 0 6px;font-size:16px}.card p{margin:0;color:var(--muted);font-size:14.5px}
+figure{margin:16px 0;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+figure img{display:block;width:100%;height:auto}figcaption{padding:10px 14px;color:var(--muted);font-size:14px}
+iframe{width:100%;height:480px;border:1px solid var(--line);border-radius:10px;background:var(--card)}
+ol li{margin:4px 0}code{background:var(--card);border:1px solid var(--line);padding:1px 6px;border-radius:5px;font-size:14px}
+footer{margin-top:48px;color:var(--muted);font-size:14px}a{color:var(--accent)}
+</style>
+</head>
+<body>
+<main>
+<header>
+<h1>Halal Travel Planner</h1>
+<p>An open-source Claude skill that plans halal holidays from first idea to day-by-day itinerary, checking every hotel, restaurant and activity against your own standards.</p>
+<div class="btns"><a class="primary" href="https://github.com/farazfookeer/halal-travel">View on GitHub</a><a class="secondary" href="map.html">Open the example map</a></div>
+</header>
+
+<h2>What it checks</h2>
+<div class="grid">
+<div class="card"><h3>Food and alcohol</h3><p>Halal-certified food, alcohol-free hotels and nearby halal restaurants, each with an evidence label.</p></div>
+<div class="card"><h3>Prayer logistics</h3><p>Offline prayer times in 19 regional methods, qibla bearing, Jummah mosques and airport prayer rooms.</p></div>
+<div class="card"><h3>Privacy and modesty</h3><p>Women-only pools, spas and beaches, private villas and burkini-friendly resorts.</p></div>
+<div class="card"><h3>Ramadan and Eid</h3><p>Flags overlaps, plans around fasting, suhoor and iftar, and finds Eid prayer.</p></div>
+</div>
+
+<h2>How it works</h2>
+<ol>
+<li>Intake: who is travelling, dates, budget, and how strict each criterion should be.</li>
+<li>Calendar check for Ramadan, Eid, Arafah and Hajj season.</li>
+<li>Destination shortlist with live Muslim-friendliness and travel advice checks.</li>
+<li>Properties scored with a Halal Fit Score, labelled Verified, Claimed or Unknown.</li>
+<li>Shortlist with booking links. Browser booking only with your consent, stopping before payment.</li>
+<li>Itinerary as a shareable doc, a day-by-day map and a Word or PDF file.</li>
+</ol>
+
+<h2>Example: Istanbul, April 2027</h2>
+<p>A sample four-day family trip. Prayer times, qibla and Hijri dates are real calculations; the hotel and flights are placeholders.</p>
+<iframe src="map.html" title="Interactive map of the sample Istanbul itinerary" loading="lazy"></iframe>
+<figure><img src="screenshots/itinerary-doc-overview.png" alt="Sample halal itinerary for Istanbul showing overview, bookings and Halal Fit score" loading="lazy"><figcaption>Itinerary overview with the Halal Fit score</figcaption></figure>
+<figure><img src="screenshots/itinerary-doc-days.png" alt="Day-by-day halal itinerary with prayer times for each day and Jummah planning" loading="lazy"><figcaption>Each day opens with its prayer times</figcaption></figure>
+<figure><img src="screenshots/prayer-tools-cli.png" alt="Command-line output of prayer times, qibla bearing and Ramadan and Eid dates" loading="lazy"><figcaption>The offline prayer, qibla and Hijri tool</figcaption></figure>
+
+<h2>Install</h2>
+<p>Claude app: upload the <code>skills/halal-travel</code> folder as a custom skill. Claude Code: add the repo as a plugin, or copy the folder into <code>~/.claude/skills/</code>.</p>
+
+<footer>Built by Faraz Fookeer at Silsila Labs. MIT licence. Prayer times and Hijri dates are planning estimates; confirm with your local mosque.</footer>
+</main>
+</body>
+</html>

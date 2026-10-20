@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://farazfookeer.github.io/halal-travel/sitemap.xml

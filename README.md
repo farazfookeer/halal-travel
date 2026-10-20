@@ -1,6 +1,10 @@
-# Halal Travel skill
+# Halal Travel Planner: a Claude skill for halal holidays
 
-A Claude skill for planning halal holidays from first idea to day-by-day itinerary.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE) ![Python 3](https://img.shields.io/badge/python-3.9%2B-blue) ![No dependencies](https://img.shields.io/badge/dependencies-none-lightgrey)
+
+An open-source Claude skill for planning halal holidays and Muslim-friendly travel, from first idea to day-by-day itinerary. It covers halal food, alcohol-free hotels, prayer times, qibla direction, Jummah, women-only and private pools, Ramadan and Eid.
+
+**Project page:** [farazfookeer.github.io/halal-travel](https://farazfookeer.github.io/halal-travel/)
 
 It checks every hotel, restaurant, flight and activity against the traveller's own standards across four criteria: food and alcohol, prayer logistics, privacy and modesty, and Ramadan and Eid. Each option gets a Halal Fit Score with evidence labels (Verified, Claimed, Unknown), so nothing is called halal without a source.
 
