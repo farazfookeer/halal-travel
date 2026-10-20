@@ -1,0 +1,318 @@
+{
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9757051,
+     41.0063286
+    ]
+   },
+   "properties": {
+    "title": "Day 1.1 Sultanahmet Square",
+    "day": 1,
+    "time": "18:30",
+    "description": "18:30 · Evening walk; Asr prayed at the hotel",
+    "marker-color": "#2E7D6B",
+    "marker-symbol": "1",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9768138,
+     41.0054096
+    ]
+   },
+   "properties": {
+    "title": "Day 1.2 Blue Mosque",
+    "day": 1,
+    "time": "19:30",
+    "description": "19:30 · Pray Maghrib (19:43)",
+    "marker-color": "#2E7D6B",
+    "marker-symbol": "1",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9757051,
+      41.0063286
+     ],
+     [
+      28.9768138,
+      41.0054096
+     ]
+    ]
+   },
+   "properties": {
+    "title": "Thu 15 Apr: Arrival and Sultanahmet",
+    "day": 1,
+    "stroke": "#2E7D6B",
+    "stroke-width": 3,
+    "stroke-opacity": 0.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9680681,
+     41.0106848
+    ]
+   },
+   "properties": {
+    "title": "Day 2.1 Grand Bazaar",
+    "day": 2,
+    "time": "09:30",
+    "description": "09:30 · Leave by 12:15 for Jummah",
+    "marker-color": "#C2185B",
+    "marker-symbol": "2",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9639711,
+     41.016047
+    ]
+   },
+   "properties": {
+    "title": "Day 2.2 Süleymaniye Mosque",
+    "day": 2,
+    "time": "12:30",
+    "description": "12:30 · Jummah ~13:04; women's section",
+    "marker-color": "#C2185B",
+    "marker-symbol": "2",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9705194,
+     41.0165001
+    ]
+   },
+   "properties": {
+    "title": "Day 2.3 Spice Bazaar",
+    "day": 2,
+    "time": "15:30",
+    "description": "15:30 · Pray Asr (16:48) at Yeni Cami",
+    "marker-color": "#C2185B",
+    "marker-symbol": "2",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9680681,
+      41.0106848
+     ],
+     [
+      28.9639711,
+      41.016047
+     ],
+     [
+      28.9705194,
+      41.0165001
+     ]
+    ]
+   },
+   "properties": {
+    "title": "Fri 16 Apr: Bazaars and Jummah",
+    "day": 2,
+    "stroke": "#C2185B",
+    "stroke-width": 3,
+    "stroke-opacity": 0.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9768138,
+     41.0054096
+    ]
+   },
+   "properties": {
+    "title": "Day 3.1 Blue Mosque",
+    "day": 3,
+    "time": "09:00",
+    "description": "09:00 · Dress code: hair, knees, shoulders covered",
+    "marker-color": "#1565C0",
+    "marker-symbol": "3",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.980175,
+     41.008583
+    ]
+   },
+   "properties": {
+    "title": "Day 3.2 Hagia Sophia Grand Mosque",
+    "day": 3,
+    "time": "11:00",
+    "description": "11:00 · Pray Dhuhr (13:04) here",
+    "marker-color": "#1565C0",
+    "marker-symbol": "3",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9833789,
+     41.0115195
+    ]
+   },
+   "properties": {
+    "title": "Day 3.3 Topkapı Palace",
+    "day": 3,
+    "time": "14:30",
+    "description": "14:30 · Sacred Relics; closed Tuesdays",
+    "marker-color": "#1565C0",
+    "marker-symbol": "3",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9768138,
+      41.0054096
+     ],
+     [
+      28.980175,
+      41.008583
+     ],
+     [
+      28.9833789,
+      41.0115195
+     ]
+    ]
+   },
+   "properties": {
+    "title": "Sat 17 Apr: Ottoman heritage",
+    "day": 3,
+    "stroke": "#1565C0",
+    "stroke-width": 3,
+    "stroke-opacity": 0.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9338509,
+     41.0479225
+    ]
+   },
+   "properties": {
+    "title": "Day 4.1 Eyüp Sultan Mosque",
+    "day": 4,
+    "time": "10:30",
+    "description": "10:30 · Tomb of Abu Ayyub al-Ansari; pray Dhuhr",
+    "marker-color": "#E65100",
+    "marker-symbol": "4",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9335388,
+     41.0541001
+    ]
+   },
+   "properties": {
+    "title": "Day 4.2 Pierre Loti Hill",
+    "day": 4,
+    "time": "11:30",
+    "description": "11:30 · Cable car view; alcohol policy Unknown",
+    "marker-color": "#E65100",
+    "marker-symbol": "4",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9728493,
+     41.0181646
+    ]
+   },
+   "properties": {
+    "title": "Day 4.3 Eminönü Pier",
+    "day": 4,
+    "time": "14:00",
+    "description": "14:00 · Bosphorus cruise 14:00 to 15:30",
+    "marker-color": "#E65100",
+    "marker-symbol": "4",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9338509,
+      41.0479225
+     ],
+     [
+      28.9335388,
+      41.0541001
+     ],
+     [
+      28.9728493,
+      41.0181646
+     ]
+    ]
+   },
+   "properties": {
+    "title": "Sun 18 Apr: Eyüp and the Bosphorus",
+    "day": 4,
+    "stroke": "#E65100",
+    "stroke-width": 3,
+    "stroke-opacity": 0.8
+   }
+  }
+ ]
+}

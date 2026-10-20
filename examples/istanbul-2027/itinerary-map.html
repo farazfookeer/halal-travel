@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Istanbul Itinerary Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+ html,body{margin:0;height:100%;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+ #map{position:absolute;inset:0}
+ .panel{position:absolute;top:12px;left:12px;z-index:1000;background:#fff;border-radius:10px;padding:12px 14px;box-shadow:0 2px 10px rgba(0,0,0,.18);max-width:290px;font-size:13px}
+ .panel h1{font-size:15px;margin:0 0 4px}.panel p{margin:0 0 8px;color:#555}
+ .panel label{display:flex;gap:8px;align-items:center;margin:4px 0;cursor:pointer}
+ .sw{width:12px;height:12px;border-radius:50%;flex:none}
+ .pin{width:26px;height:26px;border-radius:50%;color:#fff;font:600 12px system-ui;display:flex;align-items:center;justify-content:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+ @media (max-width:500px){.panel{max-width:calc(100% - 48px)}}
+</style></head><body>
+<div id="map"></div>
+<div class="panel"><h1>Istanbul, 15 to 18 April 2027</h1><p>Sample itinerary from the halal-travel skill. Stops are planned around the five prayers.</p><div id="days"></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script>
+const data = {
+ "type": "FeatureCollection",
+ "features": [
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9757051,
+     41.0063286
+    ]
+   },
+   "properties": {
+    "title": "Day 1.1 Sultanahmet Square",
+    "day": 1,
+    "time": "18:30",
+    "description": "18:30 · Evening walk; Asr prayed at the hotel",
+    "marker-color": "#2E7D6B",
+    "marker-symbol": "1",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9768138,
+     41.0054096
+    ]
+   },
+   "properties": {
+    "title": "Day 1.2 Blue Mosque",
+    "day": 1,
+    "time": "19:30",
+    "description": "19:30 · Pray Maghrib (19:43)",
+    "marker-color": "#2E7D6B",
+    "marker-symbol": "1",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9757051,
+      41.0063286
+     ],
+     [
+      28.9768138,
+      41.0054096
+     ]
+    ]
+   },
+   "properties": {
+    "title": "Thu 15 Apr: Arrival and Sultanahmet",
+    "day": 1,
+    "stroke": "#2E7D6B",
+    "stroke-width": 3,
+    "stroke-opacity": 0.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9680681,
+     41.0106848
+    ]
+   },
+   "properties": {
+    "title": "Day 2.1 Grand Bazaar",
+    "day": 2,
+    "time": "09:30",
+    "description": "09:30 · Leave by 12:15 for Jummah",
+    "marker-color": "#C2185B",
+    "marker-symbol": "2",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9639711,
+     41.016047
+    ]
+   },
+   "properties": {
+    "title": "Day 2.2 Süleymaniye Mosque",
+    "day": 2,
+    "time": "12:30",
+    "description": "12:30 · Jummah ~13:04; women's section",
+    "marker-color": "#C2185B",
+    "marker-symbol": "2",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9705194,
+     41.0165001
+    ]
+   },
+   "properties": {
+    "title": "Day 2.3 Spice Bazaar",
+    "day": 2,
+    "time": "15:30",
+    "description": "15:30 · Pray Asr (16:48) at Yeni Cami",
+    "marker-color": "#C2185B",
+    "marker-symbol": "2",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9680681,
+      41.0106848
+     ],
+     [
+      28.9639711,
+      41.016047
+     ],
+     [
+      28.9705194,
+      41.0165001
+     ]
+    ]
+   },
+   "properties": {
+    "title": "Fri 16 Apr: Bazaars and Jummah",
+    "day": 2,
+    "stroke": "#C2185B",
+    "stroke-width": 3,
+    "stroke-opacity": 0.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9768138,
+     41.0054096
+    ]
+   },
+   "properties": {
+    "title": "Day 3.1 Blue Mosque",
+    "day": 3,
+    "time": "09:00",
+    "description": "09:00 · Dress code: hair, knees, shoulders covered",
+    "marker-color": "#1565C0",
+    "marker-symbol": "3",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.980175,
+     41.008583
+    ]
+   },
+   "properties": {
+    "title": "Day 3.2 Hagia Sophia Grand Mosque",
+    "day": 3,
+    "time": "11:00",
+    "description": "11:00 · Pray Dhuhr (13:04) here",
+    "marker-color": "#1565C0",
+    "marker-symbol": "3",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9833789,
+     41.0115195
+    ]
+   },
+   "properties": {
+    "title": "Day 3.3 Topkapı Palace",
+    "day": 3,
+    "time": "14:30",
+    "description": "14:30 · Sacred Relics; closed Tuesdays",
+    "marker-color": "#1565C0",
+    "marker-symbol": "3",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9768138,
+      41.0054096
+     ],
+     [
+      28.980175,
+      41.008583
+     ],
+     [
+      28.9833789,
+      41.0115195
+     ]
+    ]
+   },
+   "properties": {
+    "title": "Sat 17 Apr: Ottoman heritage",
+    "day": 3,
+    "stroke": "#1565C0",
+    "stroke-width": 3,
+    "stroke-opacity": 0.8
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9338509,
+     41.0479225
+    ]
+   },
+   "properties": {
+    "title": "Day 4.1 Eyüp Sultan Mosque",
+    "day": 4,
+    "time": "10:30",
+    "description": "10:30 · Tomb of Abu Ayyub al-Ansari; pray Dhuhr",
+    "marker-color": "#E65100",
+    "marker-symbol": "4",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9335388,
+     41.0541001
+    ]
+   },
+   "properties": {
+    "title": "Day 4.2 Pierre Loti Hill",
+    "day": 4,
+    "time": "11:30",
+    "description": "11:30 · Cable car view; alcohol policy Unknown",
+    "marker-color": "#E65100",
+    "marker-symbol": "4",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "Point",
+    "coordinates": [
+     28.9728493,
+     41.0181646
+    ]
+   },
+   "properties": {
+    "title": "Day 4.3 Eminönü Pier",
+    "day": 4,
+    "time": "14:00",
+    "description": "14:00 · Bosphorus cruise 14:00 to 15:30",
+    "marker-color": "#E65100",
+    "marker-symbol": "4",
+    "marker-size": "medium"
+   }
+  },
+  {
+   "type": "Feature",
+   "geometry": {
+    "type": "LineString",
+    "coordinates": [
+     [
+      28.9338509,
+      41.0479225
+     ],
+     [
+      28.9335388,
+      41.0541001
+     ],
+     [
+      28.9728493,
+      41.0181646
+     ]
+    ]
+   },
+   "properties": {
+    "title": "Sun 18 Apr: Eyüp and the Bosphorus",
+    "day": 4,
+    "stroke": "#E65100",
+    "stroke-width": 3,
+    "stroke-opacity": 0.8
+   }
+  }
+ ]
+};
+const map = L.map('map');
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; OpenStreetMap contributors'}).addTo(map);
+const groups = {}, all = [];
+data.features.forEach(f => {
+  const d = f.properties.day; groups[d] = groups[d] || L.layerGroup().addTo(map);
+  if (f.geometry.type === 'LineString') {
+    L.polyline(f.geometry.coordinates.map(c=>[c[1],c[0]]),{color:f.properties.stroke,weight:3,opacity:.8,dashArray:'6 6'}).addTo(groups[d]);
+    groups[d].title = f.properties.title; groups[d].color = f.properties.stroke;
+  } else {
+    const [lo,la] = f.geometry.coordinates; all.push([la,lo]);
+    const n = f.properties.title.split(' ')[1];
+    const icon = L.divIcon({className:'',html:`<div class="pin" style="background:${f.properties['marker-color']}">${n}</div>`,iconSize:[26,26],iconAnchor:[13,13]});
+    L.marker([la,lo],{icon}).bindPopup(`<b>${f.properties.title}</b><br>${f.properties.description}`).addTo(groups[d]);
+  }
+});
+const box = document.getElementById('days');
+Object.keys(groups).forEach(d => {
+  const g = groups[d], l = document.createElement('label');
+  l.innerHTML = `<input type="checkbox" checked><span class="sw" style="background:${g.color}"></span>${g.title}`;
+  l.querySelector('input').onchange = e => e.target.checked ? g.addTo(map) : map.removeLayer(g);
+  box.appendChild(l);
+});
+map.fitBounds(all,{padding:[40,40]});
+</script></body></html>

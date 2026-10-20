@@ -14,6 +14,33 @@ It checks every hotel, restaurant, flight and activity against the traveller's o
 6. **Optional browser booking**: only with explicit consent, always stopping before payment
 7. **Itinerary**: shareable doc, day-by-day map and Word or PDF, built around prayer times and Jummah
 
+## Example: Istanbul, April 2027
+
+A sample four-day family trip produced with the skill. Prayer times, qibla and Hijri dates are real calculations; the hotel, flights and halal claims are placeholders.
+
+### Itinerary doc
+
+![Itinerary overview, bookings and Halal Fit score](docs/screenshots/itinerary-doc-overview.png)
+
+Each day opens with its prayer times, and every food suggestion carries an evidence label.
+
+![Day-by-day plan built around prayer times and Jummah](docs/screenshots/itinerary-doc-days.png)
+
+Full text: [examples/istanbul-2027/itinerary.md](examples/istanbul-2027/itinerary.md)
+
+### Map
+
+![Four-day route across Istanbul](docs/screenshots/itinerary-map.png)
+
+![Historic peninsula close-up](docs/screenshots/itinerary-map-peninsula.png)
+
+- **Interactive on GitHub:** open [itinerary-map.geojson](examples/istanbul-2027/itinerary-map.geojson) and GitHub renders it as a zoomable map with a popup for each stop.
+- **Interactive in a browser:** download [itinerary-map.html](examples/istanbul-2027/itinerary-map.html) and open it. Each day can be toggled on and off.
+
+### Prayer tools
+
+![prayer_tools.py output for the Istanbul trip](docs/screenshots/prayer-tools-cli.png)
+
 ## Offline prayer tools
 
 `skills/halal-travel/scripts/prayer_tools.py` needs no network or packages:
